@@ -8,7 +8,7 @@
 
 2.Додати в папку цього репозиторія csv-файли з даними по ЗНО за 2019 та 2020 роки (https://zno.testportal.com.ua/opendata);
 
-3.Файли flyway.conf, V1__Create_table.sql та V1__Migrate.sql додати у відповідні папки flyway;
+3.Файли flyway.conf, V1__Create_table.sql та V2__Migrate.sql додати у відповідні папки flyway;
 
 4.Запустити файл main.py(програма з кп№1). При запуску програма попросить ввести  дані: назву БД,  хост, порт, ім'я користувача, пароль;
 
