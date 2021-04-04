@@ -28,13 +28,13 @@ def connect_db():
 
 def write_result(result_file, conn, cur):
     query = '''
-    SELECT Address.Region, Exam.Test_year, min(Exam.Ball100) 
+    SELECT Address.Region, Exam.Year_test, min(Exam.Ball100) 
     FROM Exam JOIN Person ON (Exam.person_id = Person.person_id) 
 	JOIN Person_Address On (Person_Address.person_id = Person.person_id)
 	JOIN Address ON (Person_Address.address_id = Address.address_id)
-    WHERE Exam.Object_name = 'Історія' AND
+    WHERE Exam.Object_name = 'Історія України' AND
         Exam.Object_status = 'Зараховано'
-    GROUP BY Address.Region, Exam.Test_year;'''
+    GROUP BY Address.Region, Exam.Year_test;'''
     cur.execute(query)
     with open(result_file, 'w', newline='', encoding="cp1251") as csv_file:
         csv_writer = csv.writer(csv_file)
