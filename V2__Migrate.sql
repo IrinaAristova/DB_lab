@@ -67,7 +67,6 @@ SELECT DISTINCT ON (all_schools.school_name)
 	all_schools.school_name, 
 	Address.address_id
 FROM (
-    -- інформація про всі навчальні заклади: назва та місцезнаходження
     select distinct * 
     FROM (
         SELECT DISTINCT EOName, EOTerName, EOAreaName, EORegName FROM ZNO_table
